@@ -5,6 +5,9 @@ $(document).ready(function () {
     var isYesPressed = false;
 
     $('.container').click(function () {
+        if (clickCount == 6 && !isYesPressed && !isNoPressed) {
+            return;
+        }
         clickCount++; 
         if (clickCount === 1) {
             // Animación de subida y aumento de tamaño
